@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+
+<h1>Bienvenido a su calculo de masa corporal<h1>
+
+<script>
+
+    function saltarLinea() {
+
+        document.write("<br>");
+        document.write("<br>");    
+    	document.write("<br>");
+    	
+    }
+    
+
+    function imprimir(frase) {
+
+        document.write(frase);
+        saltarLinea();
+
+    }  
+
+   	function calcularImc(peso,altura) {
+
+   		return  (peso / ( altura * altura));
+   	
+   	}	
+  	
+   	nombre = prompt("¿Cual es tu nombre?");
+   	pesoinformado = prompt( " Hola " + nombre + " Informe su peso ");
+   	alturainformado = parseFloat(nombre + " informe su altura ");
+   	imccalculado = calcularImc(pesoinformado,alturainformado);
+ 
+   	imprimir (nombre + " su IMC calculado es: " + imccalculado);
+
+   	if (imccalculado < 18.5) {
+
+   		imprimir(nombre + " Se encuentra abajo de lo recomendado ");
+
+    }
+ 	if (imccalculado >= 18.5) {
+
+    	if (imccalculado < 25){
+
+   			imprimir( nombre + " Su IMC esta dentro de lo normal ");
+   		}
+
+    }
+    if (imccalculado >= 25) {
+
+     	if (imccalculado < 30){
+
+   			imprimir(nombre + " Su IMC es considerado sobrepeso ");
+   		}
+
+    }
+
+    if (imccalculado >= 30) {
+    	imprimir(nombre + " Su IMC es considerado como obesidad ")
+   		
+    }	
+  	
+</script>
